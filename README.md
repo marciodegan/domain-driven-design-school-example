@@ -48,3 +48,8 @@
 
 <img src="https://user-images.githubusercontent.com/58707950/140654634-6315f3ef-3bfc-406b-ac63-0848d9350479.png" width="30%"></img> 
 <img src="https://user-images.githubusercontent.com/58707950/140654633-745e44f4-a19f-4823-b4f1-a8f43087cb30.png" width="30%"></img>
+
+
+#### Invariantes
+- É uma regra de negócio que deve sempre ser verdadeira para os objetos serem válidos.
+- Se um aluno tiver mais do que 2 telefones em nosso sistema, essa regra foi violada, logo, o Aluno estará em um estado inválido. Invariantes nada mais são do que regras de negócio que precisam ser verificadas para garantir sua consistência.
