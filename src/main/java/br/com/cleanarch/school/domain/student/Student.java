@@ -21,7 +21,11 @@ public class Student {
     }
 
     public void addPhone(String ddd, String number) {
+        if (phones.size() == 2) {
+            throw new MaxPhoneNumberReached(new Phone(ddd, number));
+        }
         this.phones.add(new Phone(ddd, number));
+        System.out.println("Adding phone (" + ddd + ")" + number + " for student: " + name);
     }
 
     public String getCpf() {
