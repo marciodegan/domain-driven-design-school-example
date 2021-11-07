@@ -1,44 +1,50 @@
-### This is small project to demonstrate Clean Architecture based on Alura course: https://cursos.alura.com.br/course/java-clean-architecture
-
+### Domain Driven Design in Java
+#### This is small project for reviewing Domain Driven Design concepts such as: Ubiquitous Language, Aggregates, Events and more. 
+- Reference - it´s based on Alura course: https://cursos.alura.com.br/course/java-domain-driven-design-conceitos
+- it´s a continuation of: https://github.com/marciodegan/clean-architecture-school-example
+##
 #### General notes:
-- Componentes do software e suas relações
-- Infraestrutura do software
-- Estrutura e design do código
-- Suporte aos requisitos de negócio
-- Simplificar evoluções no software
-- Arquitetura também está fortemente relacionada com os Requisitos não funcionais do software: Performance, Escalabilidade, Disponibilidade, Confiabilidade, Segurança, Manutenibilidade e Extensibilidade.
-- More: https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=513807
-#### 
-- Arquitetura em Camadas: MVC -> User Interface, Business (regras de negócio), Data(persistencia de dados)
-####
-- Onion Architecture: 
-####
-- Clean Architecture: Isolar o codigo de dominio da aplicacao, pra fazer a ponte é usado inversão de dependencias atraves de interfaces.
-- Favorece boas práticas de OO
-- Codigo de dominio com alta "testabilidade"
-- Independencia de frameworks e detalhes de infraestrutura
-####
-- Screaming Architecture: https://blog.cleancoder.com/uncle-bob/2011/09/30/Screaming-Architecture.html
-- o nosso domínio (camada mais interna) é independente de qualquer detalhe exterior. Nossa aplicação depende apenas do nosso domínio, e não conhece detalhes de infraestrutura. A camada de infraestrutura apoia as camadas mais interiores.
-####
-- Ao desenvolver um sistema complexo, o domínio deve ser o foco. Por isso, ele é a camada central dos padrões de arquitetura.
-- Web, frameworks e mecanismos de persistência (como bancos de dados) são meros detalhes. São ferramentas para executar suas regras de negócio.
-- Executar a sua aplicação pela CLI deve ser tão fácil quanto através de uma API. O mesmo vale para uma interface Web.
-- Oconceito de modelarmos a nossa aplicação pensando primeiramente no domínio é chamado de Domain Driven Design, ou design orientado a domínio.
-- Munidos desta mentalidade, podemos garantir uma melhor manutenibilidade e extensibilidade de nosso projeto.
+- "Desenvolver software orientado ao domínio"
+- muitas vezes a aplicação nao 
+- Como deixar o explicito os conceitos do domínio do software? Geralmente o que fica explicito no código é a questão da tecnologia.
 
-### Service
-- As nossas regras de negócio devem ficar nas entidades e VOs, mas nem sempre isso faz sentido. Quando precisamos executar alguma ação que não faça parte de nenhuma entidade nem de um VO, podemos utilizar uma classe Service.
-- Nem sempre uma classe *Service( está diretamente relacionada com alguma entidade.
-- Exemplo: o conceito de cifrar senha pertence a camada de domínio. Mas a implementação em si, é da infrastrutura porque tem relação com os algorítmos de hash e isso é detalhe da infraestrutura
+### Como deveria ser:
+- Ficha Cadastral do paciente
+- Solicitação de exame médico
+- Consulta de laudos
+- Impressão de receitas médicas
+- Busca de pacientes pelo CPF
+####
+- Os termos em destaque são termos relacionados ao domínio da aplicação.
+- Facilmente se percebe a que a aplicação se trata, exemplo, de uma clínica ou hospital.
 
-### Application
-- O que entra na camada de aplicação pode ser um assunto polêmico. A interface de envio de e-mail que acabamos de criar poderia muito bem estar em nosso domínio, sem ferir nenhuma regra.
-- Use Cases ficam no Application. Exemplo: Servico de Matricular um Aluno.
-- Os termos Use Case, Application Service e Command Handler são basicamente sinônimos e servem para fornecer pontos de entrada na sua aplicação, de forma independente dos mecanismos de entrega (Web, CLI, etc).
+## MAS COMO É NA PRÁTICA:
+- Padrão MVC - pra separar as camadas do projeto
+- Requisições assíncronas
+- Data Access Object
+- Spring Boot
+- Ajax com JQuery
+- Identidade Visual
+####
+- O foco é todo na tecnologia em questões de biblitecas, padrões, frameworks, separação em camadas, performance, requisitos não funcionais.
+- O foco é totalmente em tecnologia que não fala sobre o que é a aplicação. É uma aplicação hospitalar, financeira, bancária? Não é possivel identificar.
+- Para sistemas complexos, isso dificulta a manutenção, para novos entrantes no projeto, 
 
-> #### Domain Services são classes que representam uma ação entre mais de uma entidade.
-> ####
-> #### Application Services controlam o fluxo de alguma regra em nossa aplicação.
-> ####
-> #### Infrastructure Services são implementações de interfaces presentes nas camadas de domínio ou de aplicação.
+### PRINCIPAIS CONCEITOS DDD:
+- Foco no domínio
+- Linguagem Ubíqua - linguagem universal focada no domínio da aplicacao. um linguagem comum para facilitar comunicação entre a equipe técnica e a equipe especialista do domínio da aplicação.
+- Contexto delimitado 
+- Blocos de Construção
+
+#### Building blocks ou Blocos de construção:
+- Entity
+- Value Object
+- Repository
+- Factory
+- Service
+
+#### Linguagem Ubiqua 
+- Exemplos no código => classe Indicação. Indicante ao invés do indicador, pois o termo utilizado pelo time de dominio é o indicante. Sempre conversar usando os termos falados pelos especialista do negocio. 
+
+<img src="https://user-images.githubusercontent.com/58707950/140654634-6315f3ef-3bfc-406b-ac63-0848d9350479.png" width="30%"></img> 
+<img src="https://user-images.githubusercontent.com/58707950/140654633-745e44f4-a19f-4823-b4f1-a8f43087cb30.png" width="30%"></img>
