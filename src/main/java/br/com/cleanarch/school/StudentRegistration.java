@@ -2,9 +2,11 @@ package br.com.cleanarch.school;
 
 import br.com.cleanarch.school.application.aluno.RegisterStudent;
 import br.com.cleanarch.school.application.aluno.RegisterStudentDto;
+import br.com.cleanarch.school.domain.PublicadorDeEventos;
 import br.com.cleanarch.school.domain.student.CPF;
 import br.com.cleanarch.school.domain.student.Email;
 import br.com.cleanarch.school.domain.student.Student;
+import br.com.cleanarch.school.domain.student.StudentRegisteredLog;
 import br.com.cleanarch.school.infrastructure.student.StudentRepositoryInMemory;
 
 public class StudentRegistration {
@@ -35,8 +37,10 @@ public class StudentRegistration {
 //        student.addPhone("51", "30303030");
 
 
-        RegisterStudent register = new RegisterStudent(new StudentRepositoryInMemory());
-//        register.execute(new RegisterStudentDto(name, , email));
+        PublicadorDeEventos publicador = new PublicadorDeEventos();
+        publicador.adicionar(new StudentRegisteredLog());
+        RegisterStudent register = new RegisterStudent(new StudentRepositoryInMemory(), publicador);
+        register.execute(new RegisterStudentDto(name, cpf.getNumber(), email.getEmail()));
 //        register.toString();
 
 

@@ -53,3 +53,18 @@
 #### Invariantes
 - É uma regra de negócio que deve sempre ser verdadeira para os objetos serem válidos.
 - Se um aluno tiver mais do que 2 telefones em nosso sistema, essa regra foi violada, logo, o Aluno estará em um estado inválido. Invariantes nada mais são do que regras de negócio que precisam ser verificadas para garantir sua consistência.
+
+
+#### AGGREGATE ROOT
+- Quando temos uma classe funcionando como aggregate root (ex.: Student), ela que deve manter e fazer todo o controle de acesso as informações (como valueObjects).
+- Evita-se duplicação de código.
+- Usando o exemplo do código: evita que alguém de fora da classe (ex.: Student), adicione um telefone (e ainda com validação erradas). 
+- Então toda a manipulação dos Phones deve ser feita pela classe Student que é a AGGREGATE ROOT.
+- REGRA: Mexeu com Aggregate root, cuidar com as informações que carrega para não ferir a consistencia.
+- MORE on Aggregate - Martin Fowler´s: https://martinfowler.com/bliki/DDD_Aggregate.html
+
+#### EVENTOS DE DOMÍNIO
+- Usando o exemplo do código: RegisterStudent é um evento.
+- Pode ter um evento que registra um log / faz alguma outra lógica / enviar email.
+- Qual a motivação para termos eventos de domínio em nossa aplicação? Poder programar nossa aplicação para reagir a eventos de forma flexível. Trabalhando com eventos, o mesmo evento pode gerar várias ações, o que nos dá muita flexibilidade.
+- 

@@ -23,7 +23,7 @@ public class StudentJdbcRepository implements StudentRepository {
         try {
             String sql = "INSERT INTO STUDENT VALUES(?, ?, ?)";
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setString(1, student.getCpf());
+            ps.setString(1, student.getCpf().toString());
             ps.setString(2, student.getName());
             ps.setString(3, student.getEmail());
             ps.execute();

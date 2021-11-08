@@ -1,6 +1,7 @@
 package br.com.cleanarch.school.cleanarch.school;
 
 import br.com.cleanarch.school.domain.student.CPF;
+import br.com.cleanarch.school.domain.student.CPFNotValid;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -9,11 +10,11 @@ class CPFTest {
 
     @Test
     void shouldNotCreateCpfWithInvalidNumber(){
-        assertThrows(IllegalArgumentException.class,
+        assertThrows(CPFNotValid.class,
                 () -> new CPF("123456789"));
-        assertThrows(IllegalArgumentException.class,
+        assertThrows(CPFNotValid.class,
                 () -> new CPF(""));
-        assertThrows(IllegalArgumentException.class,
+        assertThrows(CPFNotValid.class,
                 () -> new CPF(null));
 
     }

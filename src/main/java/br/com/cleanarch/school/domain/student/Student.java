@@ -6,6 +6,7 @@ import java.util.List;
 public class Student {
 
     // ENTITY
+    // AGGREGATE ROOT
 
     private CPF cpf;
     private String name;
@@ -28,8 +29,8 @@ public class Student {
         System.out.println("Adding phone (" + ddd + ")" + number + " for student: " + name);
     }
 
-    public String getCpf() {
-        return cpf.getNumber();
+    public CPF getCpf() {
+        return cpf;
     }
 
     public String getName() {
