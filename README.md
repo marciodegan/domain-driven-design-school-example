@@ -66,4 +66,13 @@
 - Usando o exemplo do código: RegisterStudent é um evento.
 - Pode ter um evento que registra um log / faz alguma outra lógica / enviar email.
 - Qual a motivação para termos eventos de domínio em nossa aplicação? Poder programar nossa aplicação para reagir a eventos de forma flexível. Trabalhando com eventos, o mesmo evento pode gerar várias ações, o que nos dá muita flexibilidade.
-- 
+
+#### CONTEXTOS DELIMITADOS
+- A aplicação terá um contexto de Gamificação que ficará separado do contexto do domínio. 
+- Exemplo: gamificação cuida só do contexto de selos, pontos; não precisando saber das regras do contexto academico por exemplo -> regras de matrícula do aluno.
+- Se transformam em dois microserviços desacoplados.
+- Existe um acoplamento por exemplo com CPF que é do contexto "academico", e é necessário no contexto "gamificacao", pois classe Selo depende de CPF.
+- Assim não é possível extrair totalmente gamificacao e o deixa-lo isolado.
+- O ideal é buscar uma alternativa ===> MAPAS DE CONTEXTO.
+- ver sobre módulos do java9 e módulos do maven
+
