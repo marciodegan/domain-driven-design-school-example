@@ -1,10 +1,8 @@
 package br.com.cleanarch.school.academic.application.student;
 
-import br.com.cleanarch.school.academic.application.student.RegisterStudentDto;
-import br.com.cleanarch.school.academic.domain.PublicadorDeEventos;
-import br.com.cleanarch.school.academic.domain.student.CPF;
+import br.com.cleanarch.school.shared.domain.evento.PublicadorDeEventos;
+import br.com.cleanarch.school.shared.domain.CPF;
 import br.com.cleanarch.school.academic.infrastructure.student.StudentRepositoryInMemory;
-import br.com.cleanarch.school.academic.application.student.RegisterStudent;
 import br.com.cleanarch.school.academic.domain.student.Student;
 import org.junit.jupiter.api.Test;
 

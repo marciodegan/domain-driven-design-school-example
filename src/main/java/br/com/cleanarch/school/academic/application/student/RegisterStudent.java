@@ -1,6 +1,6 @@
 package br.com.cleanarch.school.academic.application.student;
 
-import br.com.cleanarch.school.academic.domain.PublicadorDeEventos;
+import br.com.cleanarch.school.shared.domain.evento.PublicadorDeEventos;
 import br.com.cleanarch.school.academic.domain.StudentRepository;
 import br.com.cleanarch.school.academic.domain.student.StudentRegistered;
 import br.com.cleanarch.school.academic.domain.student.Student;

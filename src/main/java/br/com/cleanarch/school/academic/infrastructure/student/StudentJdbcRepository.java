@@ -2,6 +2,7 @@ package br.com.cleanarch.school.academic.infrastructure.student;
 
 import br.com.cleanarch.school.academic.domain.StudentRepository;
 import br.com.cleanarch.school.academic.domain.student.*;
+import br.com.cleanarch.school.shared.domain.CPF;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

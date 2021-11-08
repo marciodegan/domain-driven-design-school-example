@@ -1,6 +1,6 @@
 package br.com.cleanarch.school.gamification.domain.selo;
 
-import br.com.cleanarch.school.academic.domain.student.CPF;
+import br.com.cleanarch.school.shared.domain.CPF;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

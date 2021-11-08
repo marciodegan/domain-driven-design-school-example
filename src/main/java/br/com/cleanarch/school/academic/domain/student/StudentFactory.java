@@ -1,5 +1,7 @@
 package br.com.cleanarch.school.academic.domain.student;
 
+import br.com.cleanarch.school.shared.domain.CPF;
+
 public class StudentFactory {
 
     private Student student;

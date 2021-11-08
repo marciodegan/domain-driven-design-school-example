@@ -1,4 +1,4 @@
-package br.com.cleanarch.school.academic.domain;
+package br.com.cleanarch.school.shared.domain.evento;
 
 /*
     Essa classe representa um ouvinte Genérico, e só sabe processar um evento e para isso, verifica se tem que processar, chama o método reage.

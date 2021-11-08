@@ -1,6 +1,6 @@
 package br.com.cleanarch.school.gamification.domain.selo;
 
-import br.com.cleanarch.school.academic.domain.student.CPF;
+import br.com.cleanarch.school.shared.domain.CPF;
 
 /*
     Gamificação. Toda vez que o Student completar algo, ganha um selo.

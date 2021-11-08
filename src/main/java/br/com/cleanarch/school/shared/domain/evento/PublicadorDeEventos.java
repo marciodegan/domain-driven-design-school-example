@@ -1,11 +1,11 @@
-package br.com.cleanarch.school.academic.domain;
+package br.com.cleanarch.school.shared.domain.evento;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /*
-O objetivo do publicador de eventos é guardar cada um dos ouvintes e quando o método for publicado para um determinado evento,
-ele dispara o método processa para cada um desses ouvintes.
+    O objetivo do publicador de eventos é guardar cada um dos ouvintes e quando o método for publicado para um determinado evento,
+    ele dispara o método processa para cada um desses ouvintes.
 * */
 public class PublicadorDeEventos {
 

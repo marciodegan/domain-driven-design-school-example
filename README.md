@@ -17,7 +17,7 @@
 - Os termos em destaque são termos relacionados ao domínio da aplicação.
 - Facilmente se percebe a que a aplicação se trata, exemplo, de uma clínica ou hospital.
 
-## MAS COMO É NA PRÁTICA:
+### MAS COMO É NA PRÁTICA:
 - Padrão MVC - pra separar as camadas do projeto
 - Requisições assíncronas
 - Data Access Object
@@ -78,3 +78,9 @@
 - MORE: https://martinfowler.com/bliki/BoundedContext.html
 
 <img src="https://user-images.githubusercontent.com/58707950/140791755-db32924f-8101-45ce-b0c0-c9c22fd88c77.png" width="23%"></img> <img src="https://user-images.githubusercontent.com/58707950/140791758-84108c29-7842-4850-adf7-13ac3aee75cd.png" width="23%"></img> <img src="https://user-images.githubusercontent.com/58707950/140791760-33e6ee84-2922-4e45-9911-69537e0fe322.png" width="23%"></img> <img src="https://user-images.githubusercontent.com/58707950/140791761-66ad1da0-460a-4d81-a934-cc588a794d36.png" width="23%"></img> 
+
+#### CONTEXTOS COMPARTILHADOS / SHARED CONTEXTS
+- A utilização de um núcleo compartilhado tem suas vantagens e desvantagens.
+- É a forma mais fácil de possibilitar a comunicação entre contextos delimitados, mas nos tira boa parte da flexibilidade.
+- Revisão sobre Bounded Contexts e Shared Kernel: http://www.fabriciorissetto.com/blog/ddd-bounded-context/
+- *SEMPRE OLHAR PROS IMPORTS*

@@ -1,4 +1,6 @@
-package br.com.cleanarch.school.academic.domain.student;
+package br.com.cleanarch.school.shared.domain;
+
+import br.com.cleanarch.school.academic.domain.student.CPFNotValid;
 
 public class CPF {
 

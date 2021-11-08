@@ -2,7 +2,7 @@ package br.com.cleanarch.school.gamification.infrastructure.selo;
 
 import br.com.cleanarch.school.gamification.domain.selo.SeloRepository;
 import br.com.cleanarch.school.gamification.domain.selo.Selo;
-import br.com.cleanarch.school.academic.domain.student.CPF;
+import br.com.cleanarch.school.shared.domain.CPF;
 
 import java.util.ArrayList;
 import java.util.List;

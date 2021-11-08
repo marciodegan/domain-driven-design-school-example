@@ -1,6 +1,6 @@
 package br.com.cleanarch.school.academic.application.student;
 
-import br.com.cleanarch.school.academic.domain.student.CPF;
+import br.com.cleanarch.school.shared.domain.CPF;
 import br.com.cleanarch.school.academic.domain.student.Email;
 import br.com.cleanarch.school.academic.domain.student.Student;
 

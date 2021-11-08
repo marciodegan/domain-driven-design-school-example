@@ -1,6 +1,6 @@
 package br.com.cleanarch.school.academic.domain;
 
-import br.com.cleanarch.school.academic.domain.student.CPF;
+import br.com.cleanarch.school.shared.domain.CPF;
 import br.com.cleanarch.school.academic.domain.student.Student;
 
 import java.util.List;

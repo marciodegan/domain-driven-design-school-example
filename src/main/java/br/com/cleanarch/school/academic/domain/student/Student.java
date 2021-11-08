@@ -1,5 +1,7 @@
 package br.com.cleanarch.school.academic.domain.student;
 
+import br.com.cleanarch.school.shared.domain.CPF;
+
 import java.util.ArrayList;
 import java.util.List;
 

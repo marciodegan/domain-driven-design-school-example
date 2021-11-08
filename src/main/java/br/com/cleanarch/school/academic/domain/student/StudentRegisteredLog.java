@@ -1,7 +1,7 @@
 package br.com.cleanarch.school.academic.domain.student;
 
-import br.com.cleanarch.school.academic.domain.Evento;
-import br.com.cleanarch.school.academic.domain.Ouvinte;
+import br.com.cleanarch.school.shared.domain.evento.Evento;
+import br.com.cleanarch.school.shared.domain.evento.Ouvinte;
 
 import java.time.format.DateTimeFormatter;
 
