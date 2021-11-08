@@ -67,7 +67,7 @@
 - Pode ter um evento que registra um log / faz alguma outra lógica / enviar email.
 - Qual a motivação para termos eventos de domínio em nossa aplicação? Poder programar nossa aplicação para reagir a eventos de forma flexível. Trabalhando com eventos, o mesmo evento pode gerar várias ações, o que nos dá muita flexibilidade.
 
-#### CONTEXTOS DELIMITADOS
+#### CONTEXTOS DELIMITADOS / BOUNDED CONTEXTS
 - A aplicação terá um contexto de Gamificação que ficará separado do contexto do domínio. 
 - Exemplo: gamificação cuida só do contexto de selos, pontos; não precisando saber das regras do contexto academico por exemplo -> regras de matrícula do aluno.
 - Se transformam em dois microserviços desacoplados.
@@ -75,4 +75,6 @@
 - Assim não é possível extrair totalmente gamificacao e o deixa-lo isolado.
 - O ideal é buscar uma alternativa ===> MAPAS DE CONTEXTO.
 - ver sobre módulos do java9 e módulos do maven
+- MORE: https://martinfowler.com/bliki/BoundedContext.html
 
+<img src="https://user-images.githubusercontent.com/58707950/140791755-db32924f-8101-45ce-b0c0-c9c22fd88c77.png" width="23%"></img> <img src="https://user-images.githubusercontent.com/58707950/140791758-84108c29-7842-4850-adf7-13ac3aee75cd.png" width="23%"></img> <img src="https://user-images.githubusercontent.com/58707950/140791760-33e6ee84-2922-4e45-9911-69537e0fe322.png" width="23%"></img> <img src="https://user-images.githubusercontent.com/58707950/140791761-66ad1da0-460a-4d81-a934-cc588a794d36.png" width="23%"></img> 
