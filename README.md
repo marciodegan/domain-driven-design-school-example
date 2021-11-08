@@ -5,7 +5,6 @@
 ##
 #### General notes:
 - "Desenvolver software orientado ao domínio"
-- muitas vezes a aplicação nao 
 - Como deixar o explicito os conceitos do domínio do software? Geralmente o que fica explicito no código é a questão da tecnologia.
 
 ### Como deveria ser:
