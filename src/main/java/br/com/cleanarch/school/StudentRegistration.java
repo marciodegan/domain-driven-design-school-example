@@ -1,7 +1,9 @@
-package br.com.cleanarch.school.academic;
+package br.com.cleanarch.school;
 
 import br.com.cleanarch.school.academic.application.student.RegisterStudent;
 import br.com.cleanarch.school.academic.application.student.RegisterStudentDto;
+import br.com.cleanarch.school.gamification.application.GeraSeloAlunoNovato;
+import br.com.cleanarch.school.gamification.infrastructure.selo.SeloRepositoryInMemory;
 import br.com.cleanarch.school.shared.domain.evento.PublicadorDeEventos;
 import br.com.cleanarch.school.shared.domain.CPF;
 import br.com.cleanarch.school.academic.domain.student.Email;
@@ -9,6 +11,10 @@ import br.com.cleanarch.school.academic.domain.student.StudentRegisteredLog;
 import br.com.cleanarch.school.academic.infrastructure.student.StudentRepositoryInMemory;
 import br.com.cleanarch.school.academic.domain.student.Student;
 
+/*
+* Essa classe representa o ponto de entrada da aplicação. Poderia ser um módulo ou uma aplicação separada.
+* Não tem problema em acessar múltiplos contextos, pois é a utilização de fato da aplicação.
+* */
 public class StudentRegistration {
 
     public static void main(String[] args) {
@@ -39,6 +45,7 @@ public class StudentRegistration {
 
         PublicadorDeEventos publicador = new PublicadorDeEventos();
         publicador.adicionar(new StudentRegisteredLog());
+        publicador.adicionar(new GeraSeloAlunoNovato(new SeloRepositoryInMemory()));
         RegisterStudent register = new RegisterStudent(new StudentRepositoryInMemory(), publicador);
         register.execute(new RegisterStudentDto(name, cpf.getNumber(), email.getEmail()));
 //        register.toString();

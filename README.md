@@ -83,4 +83,11 @@
 - A utilização de um núcleo compartilhado tem suas vantagens e desvantagens.
 - É a forma mais fácil de possibilitar a comunicação entre contextos delimitados, mas nos tira boa parte da flexibilidade.
 - Revisão sobre Bounded Contexts e Shared Kernel: http://www.fabriciorissetto.com/blog/ddd-bounded-context/
-- *SEMPRE OLHAR PROS IMPORTS*
+####
+- *SEMPRE OLHAR PARA OS IMPORTS*
+####
+- Por que não utilizar diretamente a classe de um evento, fazendo casting quando necessário? Sem depender diretamente da classe, continuamos com um baixo acoplamento entre os contextos delimitados, nos permitindo estendê-los de forma independente.
+####
+- Contextos devem ser independentes, mas precisam se comunicar de alguma forma.
+- Utilizamos eventos de domínio para realizar parte da comunicação entre contextos.
+- Cada contexto pode fornecer seus Use Cases de forma independente.
